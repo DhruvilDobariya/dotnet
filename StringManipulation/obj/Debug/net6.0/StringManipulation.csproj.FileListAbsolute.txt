@@ -1,0 +1,15 @@
+D:\Training\StringManipulation\bin\Debug\net6.0\StringManipulation.exe
+D:\Training\StringManipulation\bin\Debug\net6.0\StringManipulation.deps.json
+D:\Training\StringManipulation\bin\Debug\net6.0\StringManipulation.runtimeconfig.json
+D:\Training\StringManipulation\bin\Debug\net6.0\StringManipulation.dll
+D:\Training\StringManipulation\bin\Debug\net6.0\StringManipulation.pdb
+D:\Training\StringManipulation\obj\Debug\net6.0\StringManipulation.csproj.AssemblyReference.cache
+D:\Training\StringManipulation\obj\Debug\net6.0\StringManipulation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\StringManipulation\obj\Debug\net6.0\StringManipulation.AssemblyInfoInputs.cache
+D:\Training\StringManipulation\obj\Debug\net6.0\StringManipulation.AssemblyInfo.cs
+D:\Training\StringManipulation\obj\Debug\net6.0\StringManipulation.csproj.CoreCompileInputs.cache
+D:\Training\StringManipulation\obj\Debug\net6.0\StringManipulation.dll
+D:\Training\StringManipulation\obj\Debug\net6.0\refint\StringManipulation.dll
+D:\Training\StringManipulation\obj\Debug\net6.0\StringManipulation.pdb
+D:\Training\StringManipulation\obj\Debug\net6.0\StringManipulation.genruntimeconfig.cache
+D:\Training\StringManipulation\obj\Debug\net6.0\ref\StringManipulation.dll
