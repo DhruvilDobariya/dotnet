@@ -1,0 +1,14 @@
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\bin\Debug\netcoreapp3.1\HelloWorldAPP.exe
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\bin\Debug\netcoreapp3.1\HelloWorldAPP.deps.json
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\bin\Debug\netcoreapp3.1\HelloWorldAPP.runtimeconfig.json
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\bin\Debug\netcoreapp3.1\HelloWorldAPP.runtimeconfig.dev.json
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\bin\Debug\netcoreapp3.1\HelloWorldAPP.dll
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\bin\Debug\netcoreapp3.1\HelloWorldAPP.pdb
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\obj\Debug\netcoreapp3.1\HelloWorldAPP.csproj.AssemblyReference.cache
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\obj\Debug\netcoreapp3.1\HelloWorldAPP.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\obj\Debug\netcoreapp3.1\HelloWorldAPP.AssemblyInfoInputs.cache
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\obj\Debug\netcoreapp3.1\HelloWorldAPP.AssemblyInfo.cs
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\obj\Debug\netcoreapp3.1\HelloWorldAPP.csproj.CoreCompileInputs.cache
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\obj\Debug\netcoreapp3.1\HelloWorldAPP.dll
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\obj\Debug\netcoreapp3.1\HelloWorldAPP.pdb
+D:\dotnet\API Learning\code\C# Introduction\HelloWorldAPP\obj\Debug\netcoreapp3.1\HelloWorldAPP.genruntimeconfig.cache
