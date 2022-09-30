@@ -1,0 +1,16 @@
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\bin\Debug\net5.0\DecisionMaking.exe
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\bin\Debug\net5.0\DecisionMaking.deps.json
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\bin\Debug\net5.0\DecisionMaking.runtimeconfig.json
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\bin\Debug\net5.0\DecisionMaking.runtimeconfig.dev.json
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\bin\Debug\net5.0\DecisionMaking.dll
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\bin\Debug\net5.0\ref\DecisionMaking.dll
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\bin\Debug\net5.0\DecisionMaking.pdb
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\obj\Debug\net5.0\DecisionMaking.csproj.AssemblyReference.cache
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\obj\Debug\net5.0\DecisionMaking.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\obj\Debug\net5.0\DecisionMaking.AssemblyInfoInputs.cache
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\obj\Debug\net5.0\DecisionMaking.AssemblyInfo.cs
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\obj\Debug\net5.0\DecisionMaking.csproj.CoreCompileInputs.cache
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\obj\Debug\net5.0\DecisionMaking.dll
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\obj\Debug\net5.0\ref\DecisionMaking.dll
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\obj\Debug\net5.0\DecisionMaking.pdb
+D:\dotnet\API Learning\code\Understanding Decision making & statements\DecisionMaking\obj\Debug\net5.0\DecisionMaking.genruntimeconfig.cache
