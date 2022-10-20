@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Array
+namespace ArrayClass
 {
     class AccessingValueSDArray
     {
-        static void Main(string args[])
+        static void Main(string[] args)
         {
             int[] a = new int[5] { 1, 2, 3, 4, 5 };
 

@@ -1,4 +1,4 @@
-﻿namespace Array
+﻿namespace ArrayClass
 {
     class InitializationSDArray
     {

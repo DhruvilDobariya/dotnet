@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dotnet\\API Learning\\code\\Understanding Arrays\\Array\\Array.csproj",
-      "projectName": "Array",
-      "projectPath": "D:\\dotnet\\API Learning\\code\\Understanding Arrays\\Array\\Array.csproj",
+      "projectUniqueName": "D:\\dotnet\\API Learning\\code\\Understanding Arrays\\Array\\ArrayClass.csproj",
+      "projectName": "ArrayClass",
+      "projectPath": "D:\\dotnet\\API Learning\\code\\Understanding Arrays\\Array\\ArrayClass.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
       "outputPath": "D:\\dotnet\\API Learning\\code\\Understanding Arrays\\Array\\obj\\",
       "projectStyle": "PackageReference",
