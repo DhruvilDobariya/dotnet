@@ -1,0 +1,15 @@
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\bin\Debug\net6.0\ClassDemo.exe
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\bin\Debug\net6.0\ClassDemo.deps.json
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\bin\Debug\net6.0\ClassDemo.runtimeconfig.json
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\bin\Debug\net6.0\ClassDemo.dll
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\bin\Debug\net6.0\ClassDemo.pdb
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\obj\Debug\net6.0\ClassDemo.csproj.AssemblyReference.cache
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\obj\Debug\net6.0\ClassDemo.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\obj\Debug\net6.0\ClassDemo.AssemblyInfoInputs.cache
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\obj\Debug\net6.0\ClassDemo.AssemblyInfo.cs
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\obj\Debug\net6.0\ClassDemo.csproj.CoreCompileInputs.cache
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\obj\Debug\net6.0\ClassDemo.dll
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\obj\Debug\net6.0\refint\ClassDemo.dll
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\obj\Debug\net6.0\ClassDemo.pdb
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\obj\Debug\net6.0\ClassDemo.genruntimeconfig.cache
+D:\dotnet\API Learning\code\Understanding Classes\ClassDemo\obj\Debug\net6.0\ref\ClassDemo.dll
