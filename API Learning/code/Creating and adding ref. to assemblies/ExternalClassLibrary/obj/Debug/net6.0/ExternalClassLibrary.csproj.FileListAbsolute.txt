@@ -1,0 +1,12 @@
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\ExternalClassLibrary\bin\Debug\net6.0\ExternalClassLibrary.deps.json
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\ExternalClassLibrary\bin\Debug\net6.0\ExternalClassLibrary.dll
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\ExternalClassLibrary\bin\Debug\net6.0\ExternalClassLibrary.pdb
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\ExternalClassLibrary\obj\Debug\net6.0\ExternalClassLibrary.csproj.AssemblyReference.cache
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\ExternalClassLibrary\obj\Debug\net6.0\ExternalClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\ExternalClassLibrary\obj\Debug\net6.0\ExternalClassLibrary.AssemblyInfoInputs.cache
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\ExternalClassLibrary\obj\Debug\net6.0\ExternalClassLibrary.AssemblyInfo.cs
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\ExternalClassLibrary\obj\Debug\net6.0\ExternalClassLibrary.csproj.CoreCompileInputs.cache
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\ExternalClassLibrary\obj\Debug\net6.0\ExternalClassLibrary.dll
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\ExternalClassLibrary\obj\Debug\net6.0\refint\ExternalClassLibrary.dll
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\ExternalClassLibrary\obj\Debug\net6.0\ExternalClassLibrary.pdb
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\ExternalClassLibrary\obj\Debug\net6.0\ref\ExternalClassLibrary.dll

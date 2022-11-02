@@ -1,0 +1,5 @@
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\CreatingAndAddingReferenceToAssemblies\CreatingAndAddingReferenceToAssemblies\obj\Debug\net6.0\CreatingAndAddingReferenceToAssemblies.csproj.AssemblyReference.cache
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\CreatingAndAddingReferenceToAssemblies\CreatingAndAddingReferenceToAssemblies\obj\Debug\net6.0\CreatingAndAddingReferenceToAssemblies.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\CreatingAndAddingReferenceToAssemblies\CreatingAndAddingReferenceToAssemblies\obj\Debug\net6.0\CreatingAndAddingReferenceToAssemblies.AssemblyInfoInputs.cache
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\CreatingAndAddingReferenceToAssemblies\CreatingAndAddingReferenceToAssemblies\obj\Debug\net6.0\CreatingAndAddingReferenceToAssemblies.AssemblyInfo.cs
+D:\dotnet\API Learning\code\Creating and adding ref. to assemblies\CreatingAndAddingReferenceToAssemblies\CreatingAndAddingReferenceToAssemblies\obj\Debug\net6.0\CreatingAndAddingReferenceToAssemblies.csproj.CoreCompileInputs.cache
