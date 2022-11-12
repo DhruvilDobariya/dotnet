@@ -1,20 +1,17 @@
-﻿using System.Collections;
-
-namespace GenericCollections
+﻿namespace GenericCollections
 {
     public class QueueProperties
     {
         public static void Main(string[] args)
         {
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             queue.Enqueue("Dhruvil");
             queue.Enqueue("Dhaval");
             queue.Enqueue("Jenil");
             queue.Enqueue("Bhargav");
 
-            Console.WriteLine(queue.Count); // Get Count of Queue Elements
-
+            Console.WriteLine(queue.Count);
         }
     }
 }

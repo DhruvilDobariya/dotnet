@@ -1,5 +1,4 @@
 ﻿using DisplayCollection;
-using System.Collections;
 
 namespace GenericCollections
 {
@@ -7,26 +6,34 @@ namespace GenericCollections
     {
         public static void Main(string[] args)
         {
-
-            Stack stack = new Stack();
-
-            Display.DisplayList(stack);
+            Stack<string> stack = new Stack<string>();
 
             stack.Push("Dhruvil");
             stack.Push("Dhaval");
+            stack.Push("Dhruv");
             stack.Push("Jenil");
-            stack.Push("Bhargav");
             Display.DisplayList(stack);
 
-            stack.Pop();
+            Console.WriteLine(stack.Pop());
             Display.DisplayList(stack);
 
-            Console.WriteLine(stack.Peek()); // Return top of the stack element without remove it.
+            Console.WriteLine(stack.Peek());
+            Display.DisplayList(stack);
+
+            Console.WriteLine(stack.Contains("Dhruvil"));
+            stack.TrimExcess();
+
+            string[] arr = stack.ToArray();
+            Display.DisplayList(arr);
+
+            string[] arr2 = new string[5] { "Dhruvil", "Dhaval", "Jenil", "Bhargav", "Dhruv" };
+            Display.DisplayList(arr2);
+            stack.CopyTo(arr2, 0);
+            Display.DisplayList(arr2);
+
             stack.Clear();
             Display.DisplayList(stack);
 
-            var arr = stack.ToArray(); // Return array of stack.
-            Console.WriteLine(arr.ToString());
         }
     }
 }

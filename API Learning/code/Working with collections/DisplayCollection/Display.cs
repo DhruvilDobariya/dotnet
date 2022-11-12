@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 
 namespace DisplayCollection
 {
@@ -22,7 +21,7 @@ namespace DisplayCollection
                     {
                         Console.Write($", {item}");
                     }
-                    
+
                 }
                 Console.Write(" ]");
                 Console.WriteLine();
@@ -42,7 +41,34 @@ namespace DisplayCollection
                 {
                     if (!flag)
                     {
-                        Console.Write("{ "+ item.Key +" : "+ item.Value +" }");
+                        Console.Write("{ " + item.Key + " : " + item.Value + " }");
+                        flag = true;
+                    }
+                    else
+                    {
+                        Console.Write(", { " + item.Key + " : " + item.Value + " }");
+                    }
+
+                }
+                Console.Write(" ]");
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("dictionary is empty");
+            }
+        }
+        public static void DisplayDictionary<TKey, TValue>(ICollection dictionary) where TKey : class where TValue : class
+        {
+            if (dictionary.Count != 0)
+            {
+                bool flag = false;
+                Console.Write("[ ");
+                foreach (KeyValuePair<TKey, TValue> item in dictionary)
+                {
+                    if (!flag)
+                    {
+                        Console.Write("{ " + item.Key + " : " + item.Value + " }");
                         flag = true;
                     }
                     else

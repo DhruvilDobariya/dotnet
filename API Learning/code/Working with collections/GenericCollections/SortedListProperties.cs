@@ -7,23 +7,21 @@ namespace GenericCollections
     {
         public static void Main(string[] args)
         {
-            SortedList sortedList = new SortedList()
+            SortedList<string, string> sortedList = new SortedList<string, string>()
             {
-                {"Name", "Dhruvil" },
-                {"Collage", "Darshan" },
-                {"Working at", "Microsoft" },
-                {"City", "Rajkot" }
+                {"Name","Dhruvil" },
+                {"City","Rajkot" },
+                {"Collage","Darshan" },
+                {"Working at","Microsoft" }
             };
 
             Console.WriteLine(sortedList.Capacity);
             Console.WriteLine(sortedList.Count);
-            Console.WriteLine(sortedList.IsReadOnly);
-            Console.WriteLine(sortedList.IsFixedSize);
-            Console.WriteLine(sortedList.IsSynchronized);
             Console.WriteLine(sortedList["Name"]);
+            Display.DisplayList((ICollection)sortedList.Keys); // We just convert System.Collection.ICollection<string> to System.Collection.ICollection
+            Display.DisplayList((ICollection)sortedList.Values);
 
-            Display.DisplayList(sortedList.Keys);
-            Display.DisplayList(sortedList.Values);
+
 
         }
     }

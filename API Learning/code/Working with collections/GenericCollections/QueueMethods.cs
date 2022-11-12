@@ -1,5 +1,4 @@
 ﻿using DisplayCollection;
-using System.Collections;
 
 namespace GenericCollections
 {
@@ -7,8 +6,7 @@ namespace GenericCollections
     {
         public static void Main(string[] args)
         {
-            Queue queue = new Queue();
-            Display.DisplayList(queue);
+            Queue<string> queue = new Queue<string>();
 
             queue.Enqueue("Dhruvil");
             queue.Enqueue("Dhaval");
@@ -16,19 +14,25 @@ namespace GenericCollections
             queue.Enqueue("Bhargav");
             Display.DisplayList(queue);
 
-            queue.Dequeue();
+            Console.WriteLine(queue.Dequeue());
+            Display.DisplayList(queue);
+
+            Console.WriteLine(queue.Peek());
             Display.DisplayList(queue);
 
             Console.WriteLine(queue.Contains("Dhruvil"));
-            Console.WriteLine(queue.Count);
-            queue.TrimToSize(); // Trim size of queue
-            Console.WriteLine(queue.Count);
+
+            queue.TrimExcess();
+
+            string[] arr = queue.ToArray();
+            Display.DisplayList(arr);
+
+            string[] arr2 = new string[5] { "Dhruvil", "Dhaval", "Jenil", "Bhargav", "Dhruv" };
+            queue.CopyTo(arr2, 0);
+            Display.DisplayList(arr2);
 
             queue.Clear();
             Display.DisplayList(queue);
-
-            var arr = queue.ToArray(); // Return the array of queue
-            Console.WriteLine(arr.ToString());
 
         }
     }
