@@ -41,7 +41,7 @@ namespace GenericCollections
             sortedList.Clear();
             Display.DisplayDictionary<string, string>(sortedList);
 
-            
+
         }
     }
 }

@@ -1,0 +1,15 @@
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\obj\Debug\net7.0\EventsAndDelegates.csproj.AssemblyReference.cache
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\obj\Debug\net7.0\EventsAndDelegates.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\obj\Debug\net7.0\EventsAndDelegates.AssemblyInfoInputs.cache
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\obj\Debug\net7.0\EventsAndDelegates.AssemblyInfo.cs
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\obj\Debug\net7.0\EventsAndDelegates.csproj.CoreCompileInputs.cache
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\bin\Debug\net7.0\EventsAndDelegates.exe
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\bin\Debug\net7.0\EventsAndDelegates.deps.json
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\bin\Debug\net7.0\EventsAndDelegates.runtimeconfig.json
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\bin\Debug\net7.0\EventsAndDelegates.dll
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\bin\Debug\net7.0\EventsAndDelegates.pdb
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\obj\Debug\net7.0\EventsAndDelegates.dll
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\obj\Debug\net7.0\refint\EventsAndDelegates.dll
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\obj\Debug\net7.0\EventsAndDelegates.pdb
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\obj\Debug\net7.0\EventsAndDelegates.genruntimeconfig.cache
+D:\dotnet\API Learning\code\Events\EventsAndDelegates\obj\Debug\net7.0\ref\EventsAndDelegates.dll

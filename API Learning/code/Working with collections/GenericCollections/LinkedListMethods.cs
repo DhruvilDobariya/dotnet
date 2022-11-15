@@ -11,7 +11,7 @@ namespace GenericCollections
             linkedList.AddLast("Dhruvil");
             linkedList.AddLast("Dhaval");
             Display.DisplayList(linkedList);
-            
+
             linkedList.AddFirst("Jenil");
             Display.DisplayList(linkedList);
 
@@ -38,7 +38,7 @@ namespace GenericCollections
 
             LinkedListNode<string> node1 = linkedList.Find("Dhruvil");
             LinkedListNode<string> node2 = linkedList.FindLast("Dhruvil");
-            
+
             linkedList.Clear();
             Display.DisplayList(linkedList);
 

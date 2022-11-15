@@ -1,5 +1,4 @@
 ﻿using DisplayCollection;
-using System.Collections;
 
 namespace GenericCollections
 {
@@ -32,7 +31,7 @@ namespace GenericCollections
             hashSet.TrimExcess();
 
             hashSet.Clear();
-            
+
         }
     }
 }

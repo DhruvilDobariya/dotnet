@@ -1,0 +1,15 @@
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\bin\Debug\net7.0\EnumerationDemo.exe
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\bin\Debug\net7.0\EnumerationDemo.deps.json
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\bin\Debug\net7.0\EnumerationDemo.runtimeconfig.json
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\bin\Debug\net7.0\EnumerationDemo.dll
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\bin\Debug\net7.0\EnumerationDemo.pdb
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\obj\Debug\net7.0\EnumerationDemo.csproj.AssemblyReference.cache
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\obj\Debug\net7.0\EnumerationDemo.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\obj\Debug\net7.0\EnumerationDemo.AssemblyInfoInputs.cache
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\obj\Debug\net7.0\EnumerationDemo.AssemblyInfo.cs
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\obj\Debug\net7.0\EnumerationDemo.csproj.CoreCompileInputs.cache
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\obj\Debug\net7.0\EnumerationDemo.dll
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\obj\Debug\net7.0\refint\EnumerationDemo.dll
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\obj\Debug\net7.0\EnumerationDemo.pdb
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\obj\Debug\net7.0\EnumerationDemo.genruntimeconfig.cache
+D:\dotnet\API Learning\code\Enumerations\EnumerationDemo\obj\Debug\net7.0\ref\EnumerationDemo.dll
