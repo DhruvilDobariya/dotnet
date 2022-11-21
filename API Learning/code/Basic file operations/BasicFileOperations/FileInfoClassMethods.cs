@@ -4,15 +4,15 @@
     {
         public static void Main(string[] args)
         {
-            FileInfo fileInfo = new FileInfo(@"file");
+            FileInfo fileInfo = new FileInfo(@"file.txt");
 
-            fileInfo.Create();
+            fileInfo.Create().Close();
 
             StreamWriter streamWriter = fileInfo.AppendText();
             streamWriter.WriteLine("Dhruvil Dobariya");
             streamWriter.Close();
 
-            fileInfo.MoveTo(@"directory/sub directory");
+            fileInfo.MoveTo("./directory/MoveFileFormFileInfo.txt", true);
 
             FileStream fileStream1 = fileInfo.Open(FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite);
             fileStream1.Close();

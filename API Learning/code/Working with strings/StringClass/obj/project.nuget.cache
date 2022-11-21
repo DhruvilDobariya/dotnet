@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NaB9QQ0rz/bnD/k6KAXXiAO3rqj8eLQH6jcS3q7hnEKir/k0IifaFgqLkKWbg5yx2QbubugfYbaItxpuV2dIyg==",
+  "dgSpecHash": "gWYb853VuVx5O+61BqI5c8UIhGsWa5LJYdgjD6lccbIWjAfkv3MZrd3a2UkUlWWVOsU3gPc5Gx5a39K3lA+Mjg==",
   "success": true,
   "projectFilePath": "D:\\dotnet\\API Learning\\code\\Working with strings\\StringClass\\StringClass.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.10\\microsoft.netcore.app.host.win-x64.6.0.10.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.10\\microsoft.aspnetcore.app.ref.6.0.10.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.10\\microsoft.windowsdesktop.app.ref.6.0.10.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.10\\microsoft.netcore.app.ref.6.0.10.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

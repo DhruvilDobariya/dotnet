@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace BasicFileOperations
+﻿namespace BasicFileOperations
 {
     public class StreamWriterClass
     {
@@ -10,7 +8,7 @@ namespace BasicFileOperations
 
             StreamWriter streamWriter = new StreamWriter(@"names.txt");
 
-            foreach(string name in names)
+            foreach (string name in names)
             {
                 streamWriter.WriteLine(name);
             }

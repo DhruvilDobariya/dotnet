@@ -19,7 +19,7 @@
             Console.WriteLine(fileInfo.Attributes);
 
             fileInfo.Delete();
-            
+
         }
     }
 }

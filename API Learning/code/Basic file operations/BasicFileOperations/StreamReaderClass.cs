@@ -7,7 +7,7 @@
             StreamReader steamReader = new StreamReader(@"names.txt");
 
             string line;
-            while((line = steamReader.ReadLine()) != null)
+            while ((line = steamReader.ReadLine()) != null)
             {
                 Console.WriteLine(line);
             }
