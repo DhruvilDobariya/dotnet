@@ -1,0 +1,34 @@
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\bin\Debug\net7.0\WebAPILearn.Repositories.deps.json
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\bin\Debug\net7.0\WebAPILearn.Repositories.runtimeconfig.json
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\bin\Debug\net7.0\WebAPILearn.Repositories.dll
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\bin\Debug\net7.0\WebAPILearn.Repositories.pdb
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.csproj.AssemblyReference.cache
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.AssemblyInfoInputs.cache
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.AssemblyInfo.cs
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.csproj.CoreCompileInputs.cache
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.dll
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\refint\WebAPILearn.Repositories.dll
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.pdb
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.genruntimeconfig.cache
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\ref\WebAPILearn.Repositories.dll
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\bin\Debug\net7.0\WebAPILearn.Models.dll
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\bin\Debug\net7.0\WebAPILearn.Models.pdb
+D:\dotnet\API Learning\code\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.csproj.CopyComplete
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\bin\Debug\net7.0\WebAPILearn.Repositories.deps.json
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\bin\Debug\net7.0\WebAPILearn.Repositories.runtimeconfig.json
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\bin\Debug\net7.0\WebAPILearn.Repositories.dll
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\bin\Debug\net7.0\WebAPILearn.Repositories.pdb
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\bin\Debug\net7.0\WebAPILearn.Models.dll
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\bin\Debug\net7.0\WebAPILearn.Models.pdb
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.csproj.AssemblyReference.cache
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.AssemblyInfoInputs.cache
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.AssemblyInfo.cs
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.csproj.CoreCompileInputs.cache
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.csproj.CopyComplete
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.dll
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\refint\WebAPILearn.Repositories.dll
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.pdb
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\WebAPILearn.Repositories.genruntimeconfig.cache
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Repository\obj\Debug\net7.0\ref\WebAPILearn.Repositories.dll
