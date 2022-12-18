@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 using WebAPILearn.Models;
 using WebAPILearn.Repositories;
 
@@ -70,12 +69,12 @@ namespace WebAPILearn.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpPut("{id:int}")]
-        public async Task<ActionResult<Product>> AddProduct([FromRoute] int id, [FromBody] Product product)
+        [HttpPut()]
+        public async Task<ActionResult<Product>> UpdateProduct([FromBody] Product product)
         {
             if (ModelState.IsValid)
             {
-                bool flag = await _curdRepository.UpdateAsync(id, product);
+                bool flag = await _curdRepository.UpdateAsync(product);
                 if (flag)
                 {
                     return Ok(product);

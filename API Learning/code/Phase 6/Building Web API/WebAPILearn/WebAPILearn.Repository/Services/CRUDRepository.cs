@@ -103,7 +103,7 @@ namespace WebAPILearn.Repositories.Services
         #endregion
 
         #region UpdateAsync
-        public async Task<bool> UpdateAsync(int id, T entity)
+        public async Task<bool> UpdateAsync(T entity)
         {
             try
             {
@@ -112,14 +112,6 @@ namespace WebAPILearn.Repositories.Services
                     Message = "Entity is empty";
                     return false;
                 }
-                T oldEntity = await _entity.FindAsync(id);
-                if (oldEntity == null)
-                {
-                    Message = "Record not found";
-                    return false;
-                }
-                _entity.Entry(oldEntity).State = EntityState.Detached; // Here we detached oldStock instance So application dosn't ganarate "The instance of entity type cannot be tracked because another instance with the same key value for {'Id'} is already being tracked" exception.
-                                                                       // 
                 _entity.Update(entity);
                 await _productDbContext.SaveChangesAsync();
                 Message = "Record updated successfully";

@@ -1,0 +1,14 @@
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\bin\Debug\net6.0\WebAPILearn.Models.deps.json
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\bin\Debug\net6.0\WebAPILearn.Models.runtimeconfig.json
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\bin\Debug\net6.0\WebAPILearn.Models.dll
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\bin\Debug\net6.0\WebAPILearn.Models.pdb
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\obj\Debug\net6.0\WebAPILearn.Models.csproj.AssemblyReference.cache
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\obj\Debug\net6.0\WebAPILearn.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\obj\Debug\net6.0\WebAPILearn.Models.AssemblyInfoInputs.cache
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\obj\Debug\net6.0\WebAPILearn.Models.AssemblyInfo.cs
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\obj\Debug\net6.0\WebAPILearn.Models.csproj.CoreCompileInputs.cache
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\obj\Debug\net6.0\WebAPILearn.Models.dll
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\obj\Debug\net6.0\refint\WebAPILearn.Models.dll
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\obj\Debug\net6.0\WebAPILearn.Models.pdb
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\obj\Debug\net6.0\WebAPILearn.Models.genruntimeconfig.cache
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn.Models\obj\Debug\net6.0\ref\WebAPILearn.Models.dll

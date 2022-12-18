@@ -11,7 +11,7 @@ namespace WebAPIBasics.Controllers
         public Student student { get; set; }
 
         // We can use bind property aslo this way.
-        // public int Id { get; set; 
+        // public int Id { get; set; }
         // public int EnrollmentNo { get; set; }
         // public int RollNo { get; set; }
 
@@ -21,7 +21,7 @@ namespace WebAPIBasics.Controllers
         // All method of controller have permision to get parameter.
         // It dose not work on get method.
         // If We want to use with get method then we pass parameter SupportsGet = true in BindProperty
-        // For Example : [BindPropertiy(SupportsGet = true)]
+        // For Example : [BindProperties(SupportsGet = true)]
 
         [HttpPost("Index")]
         public ActionResult<Student> Index()

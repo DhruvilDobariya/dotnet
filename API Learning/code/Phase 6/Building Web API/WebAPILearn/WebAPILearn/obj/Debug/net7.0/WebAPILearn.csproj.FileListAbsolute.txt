@@ -242,3 +242,5 @@ D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn\obj
 D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn\obj\Debug\net7.0\WebAPILearn.pdb
 D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn\obj\Debug\net7.0\WebAPILearn.genruntimeconfig.cache
 D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn\obj\Debug\net7.0\ref\WebAPILearn.dll
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn\bin\Debug\net7.0\MySqlConnector.dll
+D:\dotnet\API Learning\code\Phase 6\Building Web API\WebAPILearn\WebAPILearn\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
