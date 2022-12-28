@@ -16,7 +16,7 @@ namespace WebAPILearn.Models
         [Range(0.0, Double.MaxValue, ErrorMessage = "The field {0} must be greater than {1}.")]
         public decimal Price { get; set; }
 
-        [Required(ErrorMessage = "Please enter Product Q")]
+        [Required(ErrorMessage = "Please enter Product Quantity")]
         public int Quantity { get; set; }
     }
 }
