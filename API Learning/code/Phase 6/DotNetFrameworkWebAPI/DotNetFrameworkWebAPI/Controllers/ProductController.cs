@@ -135,11 +135,11 @@ namespace DotNetFrameworkWebAPI.Controllers
 
                 if (result == 0)
                 {
-                    return BadRequest("Product not inserted.");
+                    return BadRequest("Product not updated.");
                 }
 
 
-                return Ok("Product added successfully.");
+                return Ok("Product updated successfully.");
             }
             catch (Exception ex)
             {
