@@ -146,3 +146,13 @@ Methods:
 Create, MoveTo, Delete
 AppendText
 Open, OpenWrite, OpenRead
+
+What is ActionResult,IActionResult,IHttpActionResult?
+Content Returning Results
+Redirection Results
+Status Results
+
+Deapper
+List:connection.Query<T>("query")
+GetById : connection.QuerySingleOrDefault<T>("Query")
+Update,Add,Delete: connection.Execute(""Insert into Product (Name, Quantity, Price) values (@Name, @Quantity, @Price)", product")

@@ -1,11 +1,8 @@
-﻿using Dapper;
-using DotNetFrameworkWebAPI.Models;
-using MySql.Data.MySqlClient;
-using System;
+﻿using BAL;
+using Entity;
+using Google.Protobuf.WellKnownTypes;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
+using System.Web.Helpers;
 using System.Web.Http;
 
 namespace DotNetFrameworkWebAPI.Controllers
@@ -18,172 +15,72 @@ namespace DotNetFrameworkWebAPI.Controllers
         [Route("api/Products")]
         public IHttpActionResult GetProducts()
         {
-            MySqlConnection connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection2"].ConnectionString);
-            try
-            {
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
+            ProductBAL productBAL = new ProductBAL();
+            List<Product> products = productBAL.GetProducts();
 
-                List<Product> products = connection.Query<Product>("Select * From Product").ToList();
-
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-
-                return Ok(new { Value = products, Count = products.Count });
-            }
-            catch (Exception ex)
+            if (products == null)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(productBAL.Message);
             }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-            }
+
+            return Ok(new { Value = products, Count = products.Count });
         }
 
         [HttpGet]
         [Route(("api/Products/{id:int}"))]
         public IHttpActionResult GetProductById([FromUri] int id)
         {
-            MySqlConnection connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection2"].ConnectionString);
-            try
-            {
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
+            ProductBAL productBAL = new ProductBAL();
+            Product product = productBAL.GetProductById(id);
 
-                Product product = connection.QuerySingleOrDefault<Product>("Select * From Product Where Id = " + id);
-                if (product == null)
-                {
-                    return NotFound();
-                }
-
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-
-                return Ok(new {product});
-            }
-            catch (Exception ex)
+            if (product == null)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(productBAL.Message);
             }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-            }
+
+            return Ok(new { product });
         }
 
         [HttpPost]
         [Route("api/Products")]
         public IHttpActionResult AddProduct([FromBody] Product product)
         {
-            if (!ModelState.IsValid)
+            ProductBAL productBAL = new ProductBAL();
+
+            if (!productBAL.AddProduct(product))
             {
-                return BadRequest(ModelState);
+                return BadRequest(productBAL.Message);
             }
 
-            MySqlConnection connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection2"].ConnectionString);
-            try
-            {
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
-
-                int result = connection.Execute("Insert into Product (Name, Quantity, Price) values (@Name, @Quantity, @Price)", product);
-
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-
-                if (result == 0)
-                {
-                    return BadRequest("Product not inserted.");
-                }
-
-
-                return Ok("Product added successfully.");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-            }
+            return Ok(productBAL.Message);
         }
 
         [HttpPut]
         [Route("api/Products")]
         public IHttpActionResult UpdateProduct([FromBody] Product product)
         {
-            if (!ModelState.IsValid)
+            ProductBAL productBAL = new ProductBAL();
+
+            if (!productBAL.UpdateProduct(product))
             {
-                return BadRequest(ModelState);
+                return BadRequest(productBAL.Message);
             }
 
-            MySqlConnection connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection2"].ConnectionString);
-            try
-            {
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
-
-                int result = connection.Execute("Update Product set Name = @Name, Quantity = @Quantity, Price = @Price Where Id = @Id", product);
-
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-
-                if (result == 0)
-                {
-                    return BadRequest("Product not updated.");
-                }
-
-
-                return Ok("Product updated successfully.");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-            }
+            return Ok(productBAL.Message);
         }
 
         [HttpDelete]
         [Route(("api/Products/{id:int}"))]
         public IHttpActionResult DeleteProduct([FromUri] int id)
         {
-            MySqlConnection connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection2"].ConnectionString);
-            try
+            ProductBAL productBAL = new ProductBAL();
+
+            if (!productBAL.DeleteProduct(id))
             {
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
-
-                int result = connection.Execute("Delete From Product Where Id = " + id);
-
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-
-                if (result == 0)
-                {
-                    return BadRequest("Product not deleted");
-                }
-
-
-                return Ok("Product deleted successfully.");
+                return BadRequest(productBAL.Message);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-            }
+
+            return Ok(productBAL.Message);
         }
     }
 }

@@ -99,3 +99,10 @@ D:\dotnet\API Learning\code\Phase 6\DotNetFrameworkWebAPI\DotNetFrameworkWebAPI\
 D:\dotnet\API Learning\code\Phase 6\DotNetFrameworkWebAPI\DotNetFrameworkWebAPI\bin\EntityFramework.SqlServer.xml
 D:\dotnet\API Learning\code\Phase 6\DotNetFrameworkWebAPI\DotNetFrameworkWebAPI\bin\Swashbuckle.Core.dll
 D:\dotnet\API Learning\code\Phase 6\DotNetFrameworkWebAPI\DotNetFrameworkWebAPI\bin\WebActivatorEx.dll
+D:\dotnet\API Learning\code\Phase 6\DotNetFrameworkWebAPI\DotNetFrameworkWebAPI\bin\Entity.dll
+D:\dotnet\API Learning\code\Phase 6\DotNetFrameworkWebAPI\DotNetFrameworkWebAPI\bin\Entity.pdb
+D:\dotnet\API Learning\code\Phase 6\DotNetFrameworkWebAPI\DotNetFrameworkWebAPI\bin\BAL.dll
+D:\dotnet\API Learning\code\Phase 6\DotNetFrameworkWebAPI\DotNetFrameworkWebAPI\bin\DAL.dll
+D:\dotnet\API Learning\code\Phase 6\DotNetFrameworkWebAPI\DotNetFrameworkWebAPI\bin\BAL.pdb
+D:\dotnet\API Learning\code\Phase 6\DotNetFrameworkWebAPI\DotNetFrameworkWebAPI\bin\DAL.pdb
+D:\dotnet\API Learning\code\Phase 6\DotNetFrameworkWebAPI\DotNetFrameworkWebAPI\bin\DAL.dll.config
