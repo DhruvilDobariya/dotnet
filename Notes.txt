@@ -1,0 +1,158 @@
+String Methods:
+Trim, Start, End
+ToUpper
+ToLower
+ToPad, Left, Right
+ToCharArray
+Equals
+Contains
+Compare, ToCompare
+Concat
+StartWith, EndWith
+IndexOf, LastIndexOf
+Insert, Remove
+
+DateTime Methods:
+Add Proparties
+ToString, ToFileTime, ToLocalTime, ToShortTimeString, ToLongTimeString, ToShortDateString, ToLongDateString
+ToCompare, Compare, Equals, DayInMonths, IsLeapYear
+
+Array:
+Properties:
+Length, LongLength
+Rank => Dimantion of Array
+IsFixedSize, IsReadOnly
+
+Methods:
+GetLength, GetLongLength, GetUpperBound, GetLowerBound
+GetType
+Copy, Contains, Equals
+Sort, Reverse
+Clear
+
+Generic Collection:
+List Methods:
+Add, AddRange, Remove, RemoveRange, Clear
+Insert
+Contains, CoptyTo, ToArray
+Sort, Reverse
+
+Stack Methods:
+Push, Pop, Peek, Clear
+Contains,ToArray
+
+Queue Methods:
+Enqueue, Dequeue, Clear
+Contains, ToArray
+
+LinkeList Methods:
+AddLast, AddFirst, AddBefor, AddAfter
+Remove, RemoveLast, RemoeFirst
+Contains, CopyTo
+Clear
+
+Dictionary Methods:
+Add, Romove, Clear
+Contains, ContainsKey, ContainsValue
+TrimExcess, EnsureCapacity
+
+SortedList Methods:
+Add, Romove, RemoveAt, Clear
+Contains, ContainsKey, ContainsValue,
+GetByIndex, GetKey
+GetKeys, GetValues
+TrimExcess, EnsureCapacity
+GetKeyAtIndex, GetValueAtIndex
+
+HashSet Methods:
+Add, Remove, Clear
+IsSubSet, IsProperSubSet
+IsSuperSet, IsProperSuperSet
+TrimExcess, EnsureCapacity
+
+
+Non-Generic Collection:
+ArrayList Methods:
+Add, AddRange
+Insert, Remove, RomoveAt, RemoveRange, Clear
+Sort, Reverse
+Contains, IndexOf, GetRange
+TrimToSize, CopyTo, ToArray
+
+Stack Methods:
+Push, Pop, Peek
+Contains, Clear
+CopyTo, ToArray
+
+Queue Methods:
+Enqueue, Dequeue
+Contains, Clear,
+CopyTo, ToArray
+
+HashTable Mathods:
+Add, Romove, Clear
+Contains, CopyTo
+ContainsKey, ContainsValue
+
+Sorted ListMethods:
+Add, Remove, RemoveAt, Clear
+Contains, CopyTo
+ContainsKey, ContainsValue
+IndexOfKey, IndexOfValue
+GetByIndex, GetKey
+GetKeyList, GetValueList
+
+BitArray Methods:
+And, Or, Xor, Not
+Set, SetAll
+Get
+ToArray
+
+File IO:
+StreamWriter Methods:
+Write, WriteLine
+Flush, Clear
+Close
+
+StreamReader Methods:
+ReadLine, Read, Close
+
+BinaryWriter Methods:
+Write, Close
+
+BinaryReader Methods:
+ReadString, ReadInt64, ReadBoolean, ReadDouble
+Close
+
+DirectoryInfo:
+Properties:
+Attribute
+Extension
+CreationTime, LastAccessTime
+Name, FullName
+Exist
+
+Methods:
+Create, CreateSubDirectory, Delete
+GetDirectories, GetFiles
+
+FileInfo:
+Properties:
+Name, FullName, Extension, Length
+CreationTime, LastAccessTime, LastModificationTime
+Attribute, Exist
+
+Methods:
+Create, MoveTo, Delete
+AppendText
+Open, OpenWrite, OpenRead
+
+What is ActionResult,IActionResult,IHttpActionResult?
+Content Returning Results
+Redirection Results
+Status Results
+
+Deapper
+List:connection.Query<T>("query")
+GetById : connection.QuerySingleOrDefault<T>("Query")
+Update,Add,Delete: connection.Execute(""Insert into Product (Name, Quantity, Price) values (@Name, @Quantity, @Price)", product")
