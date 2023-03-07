@@ -1,0 +1,17 @@
+Onion Architecture:
+https://www.codeguru.com/csharp/understanding-onion-architecture/
+https://www.c-sharpcorner.com/article/onion-architecture-in-asp-net-core-6-web-api/
+https://www.c-sharpcorner.com/article/clean-architecture-in-asp-net-core-web-api/
+https://www.atlassian.com/microservices/microservices-architecture/building-microservices
+https://codewithmukesh.com/blog/microservice-architecture-in-aspnet-core/
+https://www.c-sharpcorner.com/blogs/api-gateway-in-net-60-using-ocelot
+https://code-maze.com/asynchronous-programming-with-async-and-await-in-asp-net-core/
+https://michaelscodingspot.com/the-battle-of-c-to-json-serializers-in-net-core-3/
+https://www.yaplex.com/micro-orm-vs-orm/#:~:text=You%20probably%20already%20know%20what,to%20have%20a%20better%20performance.
+https://www.doctrine-project.org/projects/doctrine-orm/en/2.14/reference/second-level-cache.html
+https://www.c-sharpcorner.com/article/working-with-filters-in-asp-net-core-mvc/
+
+https://dev.to/estheragbaje/6-awesome-tools-that-turn-code-snippets-to-images-54fo
+
+
+JWT vs Oauth2 vs OpenID
