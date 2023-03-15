@@ -10,6 +10,9 @@ https://michaelscodingspot.com/the-battle-of-c-to-json-serializers-in-net-core-3
 https://www.yaplex.com/micro-orm-vs-orm/#:~:text=You%20probably%20already%20know%20what,to%20have%20a%20better%20performance.
 https://www.doctrine-project.org/projects/doctrine-orm/en/2.14/reference/second-level-cache.html
 https://www.c-sharpcorner.com/article/working-with-filters-in-asp-net-core-mvc/
+https://www.c-sharpcorner.com/article/implement-dependency-injection-in-web-api/
+https://www.c-sharpcorner.com/learn/
+https://codepedia.info/aspnet-core-jwt-refresh-token-authentication
 
 https://dev.to/estheragbaje/6-awesome-tools-that-turn-code-snippets-to-images-54fo
 
