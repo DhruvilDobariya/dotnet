@@ -13,6 +13,7 @@ https://www.c-sharpcorner.com/article/working-with-filters-in-asp-net-core-mvc/
 https://www.c-sharpcorner.com/article/implement-dependency-injection-in-web-api/
 https://www.c-sharpcorner.com/learn/
 https://codepedia.info/aspnet-core-jwt-refresh-token-authentication
+https://www.c-sharpcorner.com/article/understanding-multithreading-and-multitasking-in-c-sharp/
 
 https://dev.to/estheragbaje/6-awesome-tools-that-turn-code-snippets-to-images-54fo
 
