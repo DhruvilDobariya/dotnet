@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.Extensions.Hosting;
-using System.Net;
+﻿using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace FilterLearn.Filters
 {

@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-namespace MiddlewareLearn.Middlewares
+﻿namespace MiddlewareLearn.Middlewares
 {
     public class CustomExeptionMiddleware : IMiddleware
     {
@@ -19,7 +17,7 @@ namespace MiddlewareLearn.Middlewares
             {
                 _logger.LogError($"Middleware: {ex.Message} {ex.StackTrace}");
                 context.Response.StatusCode = 500;
-                await context.Response.WriteAsync(ex.Message);    
+                await context.Response.WriteAsync(ex.Message);
             }
         }
     }
