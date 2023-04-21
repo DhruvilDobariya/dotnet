@@ -1,8 +1,4 @@
-﻿using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Swagger;
-using Swashbuckle.AspNetCore.SwaggerUI;
-
-namespace HeaderLearn.Middleware
+﻿namespace HeaderLearn.Middleware
 {
     public class HeaderMiddleware : IMiddleware
     {
