@@ -147,12 +147,164 @@ Create, MoveTo, Delete
 AppendText
 Open, OpenWrite, OpenRead
 
+File:
+Methdos:
+Create, Delete, Move, Copy, Exist,
+Open, OpenRead, OpenWrite
+
 What is ActionResult,IActionResult,IHttpActionResult?
 Content Returning Results
 Redirection Results
 Status Results
 
-Deapper
+Dapper
 List:connection.Query<T>("query")
 GetById : connection.QuerySingleOrDefault<T>("Query")
 Update,Add,Delete: connection.Execute(""Insert into Product (Name, Quantity, Price) values (@Name, @Quantity, @Price)", product")
+
+Extension method:
+Add new method in existing class without any do modification in class.
+Ne Mthode and it's class must static.
+public static void Sqrt(this Calculator calculator, int x){}
+
+Linq:
+
+Projection:
+Select
+SelectMany - Give list of language whcih contains student knows
+var list4 = _students.SelectMany(student => student.Languages).ToList();
+
+Filter:
+Where
+TypeOf
+
+Aggregate
+GroupBy
+Having
+Min
+Max
+Sum
+Avg
+Count
+ToLookup - Key-Value pair of Collage and It's student list
+
+Order:
+OrderBy
+OrderByDescending
+ThenBy
+ThenByDescending
+Reverse
+
+Join:
+Join
+GroupJoin
+
+Set:
+Union: Union Both
+Except: Which element belongs to the A but not B
+Intersect: Which element exist in both A and B
+
+Quntifier:
+Any
+All
+Contains
+
+Elemement:
+First and FirstOrDefault
+Last and LastOrDefault
+ElementAt and ElementAtOrDefalt
+Single and SingleOrDefault
+Find, FindAll, FindIndex, FindLastIndex
+IndexOf, LastIndexOf
+
+Partition:
+Take, TakeLast, TakeWhile
+Skip, SkipLast, SkipWhile
+
+Concatination:
+Concat
+
+Equlity:
+SquenceEqual
+
+Generation:
+Repeat
+Range
+Empty: Return empty squence of object
+DefaultIfEmpty: If squence is emptythen return default element
+
+Conversation:
+Cast
+ToList
+ToArray
+ToDictionary
+AsEnumarable
+AsQueryable
+
+ORMLite:
+
+SelectAPI:
+Select,
+Where,
+Single, SingleById, SingleWhere
+OrderBy, OrderByDescending, 
+GroupBy,
+Join,
+Lookup, Dictionary
+From
+
+InsertAPI:
+Insert,
+InsertOnly: Insert particular fields only
+InsertAll
+
+UpdateAPI:
+Update,
+UpdateOnly,
+UpdateOnlyFields
+Exist
+
+Delete:
+Delete,
+DeleteById
+
+Reflection:
+Properties:
+Name, FullName
+BaseType, Namespace, Assembly
+Module, Attribute,
+IsClass, IsInterface,
+IsAbstract, IsSealed,
+IsEnum, 
+IsPublic, IsNonPublic
+IsArray, IsPointer
+
+Methods:
+GetType,
+GetConstructor,
+GetAttributes,
+GetMethods,
+GetFields,
+GetProperties,
+GetMembers
+
+Thread:
+States:
+Unstarted
+Runable: Ready to run
+Running
+Not Running: sleep or wait
+Dead: Terminate or end of excecution
+
+Properties:
+Name, ManagedThreadId,
+ThreadState, Priority
+IsAlive, IsBackground, IsThreadPoolThread
+
+Methods:
+Start
+Abort, AbortReset,
+Suspend, Resume,
+Sleep, Join
+
+
