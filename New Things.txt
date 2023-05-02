@@ -14,6 +14,7 @@ https://www.c-sharpcorner.com/article/implement-dependency-injection-in-web-api/
 https://www.c-sharpcorner.com/learn/
 https://codepedia.info/aspnet-core-jwt-refresh-token-authentication
 https://www.c-sharpcorner.com/article/understanding-multithreading-and-multitasking-in-c-sharp/
+https://thecodeblogger.com/2021/06/07/how-to-use-in-memory-caching-for-net-core-web-apis/
 
 https://dev.to/estheragbaje/6-awesome-tools-that-turn-code-snippets-to-images-54fo
 
