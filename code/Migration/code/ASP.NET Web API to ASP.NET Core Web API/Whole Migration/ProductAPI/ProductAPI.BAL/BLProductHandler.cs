@@ -1,24 +1,18 @@
 ﻿using ProductAPI.DAL;
-using ProductAPI.Models;
+using ProductAPI.Domain;
+using System.Collections.Generic;
 
-namespace ProductAPI.BAL.Services
+namespace ProductAPI.BAL
 {
-    public class BLProductHandler : IBLProductHandler
+    public class BLProductHandler
     {
-        private readonly IDbProductContext _context;
-
-        public BLProductHandler(IDbProductContext context)
-        {
-            _context = context;
-        }
-
         #region GetProducts
 
         public List<Product> GetProducts()
         {
             try
             {
-                return _context.GetProducts();
+                return new DBProductContext().GetProducts();
             }
             catch
             {
@@ -34,7 +28,7 @@ namespace ProductAPI.BAL.Services
         {
             try
             {
-                return _context.GetProductById(id);
+                return new DBProductContext().GetProductById(id);
             }
             catch { throw; }
         }
@@ -47,7 +41,7 @@ namespace ProductAPI.BAL.Services
         {
             try
             {
-                int result = _context.AddProduct(product);
+                int result = new DBProductContext().AddProduct(product);
 
                 if (result > 0)
                 {
@@ -66,7 +60,7 @@ namespace ProductAPI.BAL.Services
         {
             try
             {
-                int result = _context.UpdateProduct(product);
+                int result = new DBProductContext().UpdateProduct(product);
 
                 if (result > 0)
                 {
@@ -85,7 +79,7 @@ namespace ProductAPI.BAL.Services
         {
             try
             {
-                int result = _context.DeleteProduct(id);
+                int result = new DBProductContext().DeleteProduct(id);
 
                 if (result > 0)
                 {

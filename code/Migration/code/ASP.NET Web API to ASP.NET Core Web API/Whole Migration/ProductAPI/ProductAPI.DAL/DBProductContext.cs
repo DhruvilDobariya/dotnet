@@ -1,16 +1,14 @@
 ﻿using Dapper;
-using Entity;
 using MySql.Data.MySqlClient;
-using System;
+using ProductAPI.Domain;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 
 namespace ProductAPI.DAL
 {
     public class DBProductContext
     {
-        private MySqlConnection connection = new MySqlConnection("Server = localhost; Database = ProductDB; Uid = root; Pwd=Admin;");
+        private readonly string _connectionString = "Server = localhost; Database = ProductDB; Username = Admin; Password=gs@123;";
 
         #region GetProducts
 
@@ -18,25 +16,15 @@ namespace ProductAPI.DAL
         {
             try
             {
-                if (connection.State != ConnectionState.Open)
+                List<Product> products = new List<Product>();
+                using (MySqlConnection connection = new MySqlConnection(_connectionString))
+                {
                     connection.Open();
-
-                List<Product> products = connection.Query<Product>("Select * From Product").ToList();
-
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-
+                    products = connection.Query<Product>("Select * From Product").ToList();
+                }
                 return products;
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-            }
+            catch { throw; }
         }
 
         #endregion GetProducts
@@ -47,24 +35,15 @@ namespace ProductAPI.DAL
         {
             try
             {
-                if (connection.State != ConnectionState.Open)
+                using (MySqlConnection connection = new MySqlConnection(_connectionString))
+                {
                     connection.Open();
+                    Product product = connection.QuerySingleOrDefault<Product>("Select * From Product Where Id = " + id);
+                    return product;
+                }
 
-                Product product = connection.QuerySingleOrDefault<Product>("Select * From Product Where Id = " + id);
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-
-                return product;
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-            }
+            catch { throw; }
         }
 
         #endregion GetProductById
@@ -75,25 +54,14 @@ namespace ProductAPI.DAL
         {
             try
             {
-                if (connection.State != ConnectionState.Open)
+                using (MySqlConnection connection = new MySqlConnection(_connectionString))
+                {
                     connection.Open();
-
-                int result = connection.Execute("Insert into Product (Name, Quantity, Price) values (@Name, @Quantity, @Price)", product);
-
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-
-                return result;
+                    int result = connection.Execute("Insert into Product (Name, Quantity, Price) values (@Name, @Quantity, @Price)", product);
+                    return result;
+                }
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-            }
+            catch { throw; }
         }
 
         #endregion AddProduct
@@ -104,25 +72,15 @@ namespace ProductAPI.DAL
         {
             try
             {
-                if (connection.State != ConnectionState.Open)
+                using (MySqlConnection connection = new MySqlConnection(_connectionString))
+                {
                     connection.Open();
+                    int result = connection.Execute("Update Product set Name = @Name, Quantity = @Quantity, Price = @Price Where Id = @Id", product);
+                    return result;
+                }
 
-                int result = connection.Execute("Update Product set Name = @Name, Quantity = @Quantity, Price = @Price Where Id = @Id", product);
-
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-
-                return result;
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-            }
+            catch { throw; }
         }
 
         #endregion UpdateProduct
@@ -133,25 +91,14 @@ namespace ProductAPI.DAL
         {
             try
             {
-                if (connection.State != ConnectionState.Open)
+                using (MySqlConnection connection = new MySqlConnection(_connectionString))
+                {
                     connection.Open();
-
-                int result = connection.Execute("Delete From Product Where Id = " + id);
-
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-
-                return result;
+                    int result = connection.Execute("Delete From Product Where Id = " + id);
+                    return result;
+                }
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
-            }
+            catch { throw; }
         }
 
         #endregion DeleteProduct

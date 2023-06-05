@@ -1,5 +1,8 @@
-using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
+using ProductAPI.BAL;
+using ProductAPI.BAL.Services;
+using ProductAPI.DAL;
+using ProductAPI.DAL.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,9 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IBLProductHandler, BLProductHandler>();
+builder.Services.AddScoped<IDbProductContext, DBProductContext>();
 
 var app = builder.Build();
 
