@@ -29,24 +29,6 @@ namespace FrozenLearn
                 Console.WriteLine($"{pair.Key}: {pair.Value}");
             }
 
-            // Create a frozen set with some values
-            var frozenSet = FrozenSet.Create(new[] { "red", "green", "blue" });
-
-            // Try to modify the frozen set (will throw an exception)
-            // frozenSet.Add("yellow");
-
-            // Check if the frozen set contains a value
-            Console.WriteLine(frozenSet.Contains("green")); // True
-
-            // Check if the frozen set is a subset of another collection
-            Console.WriteLine(frozenSet.IsSubsetOf(new[] { "red", "green", "blue", "yellow" })); // True
-
-            // Enumerate the values in the frozen set
-            foreach (var value in frozenSet)
-            {
-                Console.WriteLine(value);
-            }
-
             // FrozenDictionary<TKey, TValue>:
             // A read-only dictionary that uses a hash table to store key - value pairs.
             // It has a relatively high construction cost, but offers excellent lookup performance.
