@@ -2,6 +2,7 @@
 using System.Data;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
+using System.Threading.Tasks;
 
 namespace NullOrEmptyColumnRemoveLearn
 {
@@ -10,8 +11,8 @@ namespace NullOrEmptyColumnRemoveLearn
         public static void Main(string[] args)
         {
             BenchmarkRunner.Run<NullAndEmpty>();
-            //NullAndEmpty n = new NullAndEmpty();
-            //n.SecondApproach();
+            //NullAndEmpty nullAndEmpty = new NullAndEmpty();
+            //nullAndEmpty.SeventhApproach();
         }
     }
 
@@ -353,6 +354,43 @@ namespace NullOrEmptyColumnRemoveLearn
                             Console.WriteLine($"Column '{column.ColumnName}' is not empty or NULL.");
                         }
                     }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+
+        [Benchmark]
+        public void SeventhApproach()
+        {
+            string query = "SELECT * FROM student";
+            try
+            {
+                using (var connection = new MySqlConnection(_connectionString))
+                {
+                    connection.Open();
+                    var command = new MySqlCommand(query, connection);
+                    var reader = command.ExecuteReader();
+
+                    var dt = new DataTable();
+                    dt.Load(reader);
+
+                    Parallel.ForEach(dt.Columns.Cast<DataColumn>(), column =>
+                    {
+                        bool isColumnEmptyOrNull = dt.AsEnumerable()
+                            .All(row => row.IsNull(column) || string.IsNullOrWhiteSpace(row[column].ToString()));
+
+                        if (isColumnEmptyOrNull)
+                        {
+                            Console.WriteLine($"Column '{column.ColumnName}' is empty or contains NULL values.");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Column '{column.ColumnName}' is not empty or NULL.");
+                        }
+                    });
                 }
             }
             catch (Exception ex)
