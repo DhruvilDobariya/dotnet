@@ -8,10 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <PackageReference Include="BenchmarkDotNet" Version="0.13.8" />
->>>>>>> 5feb85e3eca73f33a9bce49b343662d8f695dd3f
     <PackageReference Include="MySql.Data" Version="8.1.0" />
   </ItemGroup>
 

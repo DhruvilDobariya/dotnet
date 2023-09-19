@@ -1,45 +1,30 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
-<<<<<<< HEAD
-=======
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
-using System.Threading.Tasks;
->>>>>>> 5feb85e3eca73f33a9bce49b343662d8f695dd3f
 
 namespace NullOrEmptyColumnRemoveLearn
 {
     public class Program
     {
-<<<<<<< HEAD
-        private readonly string _connectionString = "Server=localhost; Database=JoinLearn; User=Admin; Password=gs@123;";
-        public static void Main(string[] args)
-        {
-            Program program = new Program();
-            program.SecondApproch();
-        }
-
-        public void FirstApproch()
-=======
         public static void Main(string[] args)
         {
             BenchmarkRunner.Run<NullAndEmpty>();
             //NullAndEmpty nullAndEmpty = new NullAndEmpty();
-            //nullAndEmpty.SeventhApproach();
+            //nullAndEmpty.FirstApproachDetermineWithHashSetWithMax();
         }
     }
 
     [MemoryDiagnoser]
     public class NullAndEmpty
     {
-        // private readonly string _connectionString = "Server=localhost; Database=JoinLearn; User=Admin; Password=gs@123;";
-        private readonly string _connectionString = "Server=localhost; Database=JoinLearn; User=root; Password=Admin;";
+        private readonly string _connectionString = "Server=localhost; Database=JoinLearn; User=Admin; Password=gs@123;";
+        //private readonly string _connectionString = "Server=localhost; Database=JoinLearn; User=root; Password=Admin;";
 
         [Benchmark]
         public void FirstAppraoch()
->>>>>>> 5feb85e3eca73f33a9bce49b343662d8f695dd3f
         {
-            string query = "SELECT * FROM student";
+            string query = "SELECT * FROM student LIMIT 10000";
             try
             {
                 using (var connection = new MySqlConnection(_connectionString))
@@ -58,20 +43,22 @@ namespace NullOrEmptyColumnRemoveLearn
                             Type dataType = (Type)schemaRow["DataType"];
 
                             bool isColumnEmptyOrNull = true;
+                            int count = 0;
 
                             while (reader.Read())
                             {
-                                object columnValue = reader[columnName];
+                                //object columnValue = reader[columnName];
+                                //Console.WriteLine(reader);
 
                                 //if (!reader.IsDBNull(reader.GetOrdinal(columnName)) && !string.IsNullOrWhiteSpace(columnValue.ToString()))
-<<<<<<< HEAD
-                                if (!columnValue.ToString().Equals(DBNull.Value) && !string.IsNullOrWhiteSpace(columnValue.ToString()))
-=======
-                                if (!columnValue.ToString().Equals(DBNull.Value) &&
-                                    !string.IsNullOrWhiteSpace(columnValue.ToString()))
->>>>>>> 5feb85e3eca73f33a9bce49b343662d8f695dd3f
+                                count++;
+                                if (!reader[columnName].Equals(DBNull.Value) && !string.IsNullOrWhiteSpace(reader[columnName].ToString()))
                                 {
                                     isColumnEmptyOrNull = false;
+                                    break;
+                                }
+                                if(count == 5)
+                                {
                                     break;
                                 }
                             }
@@ -84,17 +71,10 @@ namespace NullOrEmptyColumnRemoveLearn
                             {
                                 Console.WriteLine($"Column '{columnName}' is not empty or NULL.");
                             }
-<<<<<<< HEAD
-
+                            //reader.Close();
                         }
                     }
                 }
-
-=======
-                        }
-                    }
-                }
->>>>>>> 5feb85e3eca73f33a9bce49b343662d8f695dd3f
             }
             catch (Exception ex)
             {
@@ -102,15 +82,285 @@ namespace NullOrEmptyColumnRemoveLearn
             }
         }
 
-<<<<<<< HEAD
+        [Benchmark]
+        public void FirstApproachSwap()
+        {
+            string query = "SELECT * FROM student LIMIT 10000";
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                connection.Open();
+                var command = new MySqlCommand(query, connection);
+                var reader = command.ExecuteReader();
 
-        public void SecondApproch()
-=======
+                DataTable schemaTable = reader.GetSchemaTable();
+                int columnCount = 0;
+                if (schemaTable != null)
+                {
+                    columnCount = schemaTable.Rows.Count;
+                    //BitArray bits = new BitArray(columnCount);
+                    bool[] bits = new bool[columnCount]; 
+                    //bits.SetAll(true);
+                    Array.Fill(bits, true);
+
+                    //DataRow schemaRow = schemaTable.;
+                    while (reader.Read())
+                    {
+                        for (int i = 0; i < columnCount; i++)
+                        {
+                            DataRow schemaRow = schemaTable.Rows[i];
+                            string columnName = schemaRow["ColumnName"].ToString();
+
+                            if (!bits[i])
+                            {
+                                continue;
+                            }
+                            if (!reader[columnName].Equals(DBNull.Value) && !string.IsNullOrWhiteSpace(reader[columnName].ToString()))
+                            {
+                                //bits.Set(i, false);
+                                bits[i] = false;
+                            }
+                        }
+                    }
+                    for (int i = 0; i < columnCount; i++)
+                    {
+                        if (!bits[i])
+                        {
+                            Console.WriteLine($"Column '{schemaTable.Rows[i]["ColumnName"]}' is not empty or NULL.");
+                        }
+                        //else
+                        //{
+                        //    Console.WriteLine($"Column '{schemaTable.Rows[i]["ColumnName"]}' is empty or contains NULL values.");
+                        //}
+                    }
+                }
+            }
+
+
+        }
+
+        [Benchmark]
+        public void FirstApproachDetermine()
+        {
+            string query = "SELECT * FROM student LIMIT 1";
+            List<string> neededColumns = new List<string>();
+            List<string> unusedColumn = new List<string>();
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                connection.Open();
+                var command = new MySqlCommand(query, connection);
+                var reader = command.ExecuteReader();
+
+                DataTable schemaTable = reader.GetSchemaTable();
+                if (schemaTable != null)
+                {
+                    int columnCount = schemaTable.Rows.Count;
+
+                    while (reader.Read())
+                    {
+                        for (int i = 0; i < columnCount; i++)
+                        {
+                            DataRow schemaRow = schemaTable.Rows[i];
+                            string columnName = schemaRow["ColumnName"].ToString();
+
+                            if (!reader[columnName].Equals(DBNull.Value) && !string.IsNullOrWhiteSpace(reader[columnName].ToString()))
+                            {
+                                neededColumns.Add(columnName);
+                            }
+                            else
+                            {
+                                unusedColumn.Add(columnName);
+                            }
+                        }
+                    }
+
+                }
+                reader.Close();
+                query = $"Select {string.Join(',', unusedColumn)} FROM Student LIMIT 10000";
+                unusedColumn.Clear();
+                command = new MySqlCommand(query, connection);
+                reader = command.ExecuteReader();
+
+                schemaTable = reader.GetSchemaTable();
+                if (schemaTable != null)
+                {
+                    int columnCount = schemaTable.Rows.Count;
+
+                    while (reader.Read())
+                    {
+                        for (int i = 0; i < columnCount; i++)
+                        {
+                            DataRow schemaRow = schemaTable.Rows[i];
+                            string columnName = schemaRow["ColumnName"].ToString();
+
+                            if (!reader[columnName].Equals(DBNull.Value) && !string.IsNullOrWhiteSpace(reader[columnName].ToString()))
+                            {
+                                neededColumns.Add(columnName);
+                            }
+                        }
+                    }
+
+
+                }
+                foreach (string columnName in neededColumns)
+                {
+                    Console.WriteLine($"Column '{columnName}' is not empty or NULL.");
+                }
+            }
+
+        }
+
+        [Benchmark]
+        public void FirstApproachDetermineWithHashSet()
+        {
+            string query = "SELECT * FROM student LIMIT 1";
+            HashSet<string> neededColumns = new HashSet<string>();
+            HashSet<string> unusedColumn = new HashSet<string>();
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                connection.Open();
+                var command = new MySqlCommand(query, connection);
+                var reader = command.ExecuteReader();
+
+                DataTable schemaTable = reader.GetSchemaTable();
+                if (schemaTable != null)
+                {
+                    int columnCount = schemaTable.Rows.Count;
+
+                    while (reader.Read())
+                    {
+                        for (int i = 0; i < columnCount; i++)
+                        {
+                            DataRow schemaRow = schemaTable.Rows[i];
+                            string columnName = schemaRow["ColumnName"].ToString();
+
+                            if (!reader[columnName].Equals(DBNull.Value) && !string.IsNullOrWhiteSpace(reader[columnName].ToString()))
+                            {
+                                neededColumns.Add(columnName);
+                            }
+                            else
+                            {
+                                unusedColumn.Add(columnName);
+                            }
+                        }
+                    }
+
+                }
+                reader.Close();
+                query = $"Select {string.Join(',', unusedColumn)} FROM Student LIMIT 10000";
+                unusedColumn.Clear();
+                command = new MySqlCommand(query, connection);
+                reader = command.ExecuteReader();
+
+                schemaTable = reader.GetSchemaTable();
+                if (schemaTable != null)
+                {
+                    int columnCount = schemaTable.Rows.Count;
+                   
+
+                    while (reader.Read())
+                    {
+                        for (int i = 0; i < columnCount; i++)
+                        {
+                            DataRow schemaRow = schemaTable.Rows[i];
+                            string columnName = schemaRow["ColumnName"].ToString();
+
+                            if (!reader[columnName].Equals(DBNull.Value) && !string.IsNullOrWhiteSpace(reader[columnName].ToString()))
+                            {
+                                neededColumns.Add(columnName);
+                                schemaTable.Rows.Remove(schemaRow);
+                                columnCount = schemaTable.Rows.Count;
+                            }
+                        }
+                    }
+
+
+                }
+                foreach (string columnName in neededColumns)
+                {
+                    Console.WriteLine($"Column '{columnName}' is not empty or NULL.");
+                }
+            }
+
+        }
+
+        [Benchmark]
+        public void FirstApproachDetermineWithHashSetWithMax()
+        {
+            string query = "SELECT * FROM student LIMIT 1";
+            HashSet<string> neededColumns = new HashSet<string>();
+            HashSet<string> unusedColumn = new HashSet<string>();
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                connection.Open();
+                var command = new MySqlCommand(query, connection);
+                var reader = command.ExecuteReader();
+
+                DataTable schemaTable = reader.GetSchemaTable();
+                if (schemaTable != null)
+                {
+                    int columnCount = schemaTable.Rows.Count;
+
+                    while (reader.Read())
+                    {
+                        for (int i = 0; i < columnCount; i++)
+                        {
+                            DataRow schemaRow = schemaTable.Rows[i];
+                            string columnName = schemaRow["ColumnName"].ToString();
+
+                            if (!reader[columnName].Equals(DBNull.Value) && !string.IsNullOrWhiteSpace(reader[columnName].ToString()))
+                            {
+                                neededColumns.Add(columnName);
+                            }
+                            else
+                            {
+                                unusedColumn.Add(columnName);
+                            }
+                        }
+                    }
+
+                }
+                reader.Close();
+                query = $"Select {string.Join(',', unusedColumn)} FROM Student LIMIT 10000";
+                unusedColumn.Clear();
+                command = new MySqlCommand(query, connection);
+                reader = command.ExecuteReader();
+
+                schemaTable = reader.GetSchemaTable();
+                if (schemaTable != null)
+                {
+                    int columnCount = schemaTable.Rows.Count;
+
+
+                    while (reader.Read())
+                    {
+                        for (int i = 0; i < columnCount; i++)
+                        {
+                            DataRow schemaRow = schemaTable.Rows[i];
+                            string columnName = schemaRow["ColumnName"].ToString();
+
+                            if (!reader[columnName].Equals(DBNull.Value) && !string.IsNullOrWhiteSpace(reader[columnName].ToString()))
+                            {
+                                neededColumns.Add(columnName);
+                                schemaTable.Rows.Remove(schemaRow);
+                                columnCount = schemaTable.Rows.Count;
+                            }
+                        }
+                    }
+
+
+                }
+                foreach (string columnName in neededColumns)
+                {
+                    Console.WriteLine($"Column '{columnName}' is not empty or NULL.");
+                }
+            }
+
+        }
+
         [Benchmark]
         public void SecondApproach()
->>>>>>> 5feb85e3eca73f33a9bce49b343662d8f695dd3f
         {
-            string query = "SELECT * FROM student";
+            string query = "SELECT * FROM student LIMIT 10000";
             try
             {
                 using (var connection = new MySqlConnection(_connectionString))
@@ -126,51 +376,6 @@ namespace NullOrEmptyColumnRemoveLearn
 
                     if (schemaTable != null)
                     {
-<<<<<<< HEAD
-                        //foreach (DataRow schemaRow in schemaTable.Rows)
-                        //{
-                        //    string columnName = schemaRow["ColumnName"].ToString();
-                        //    Type dataType = (Type)schemaRow["DataType"];
-
-                        //    bool isColumnEmptyOrNull = true;
-
-                            //foreach (DataRow row in dt.Rows)
-                            //{
-                            //    //Console.WriteLine(row[columnName]);
-                            //    object columnValue = row[columnName];
-
-                            //    if (!columnValue.ToString().Equals(DBNull.Value) && !string.IsNullOrWhiteSpace(columnValue.ToString()))
-                            //    {
-                            //        isColumnEmptyOrNull = false;
-                            //        break;
-                            //    }
-                            //}
-
-                            
-
-                            foreach (DataColumn column in dt.Columns)
-                            {
-                                //column.Expression = $"{column} IS NOT NULL AND ${column} != ''";
-                                //if (column.DataType != )
-                                string filterExpression = $"{column.ColumnName} IS NULL OR {column.ColumnName} Like ''";
-                                DataRow[] filteredRows = dt.Select(filterExpression);
-                                Console.WriteLine(filteredRows.Length);
-                            }
-
-                            //if (isColumnEmptyOrNull)
-                            //{
-                            //    Console.WriteLine($"Column '{columnName}' is empty or contains NULL values.");
-                            //}
-                            //else
-                            //{
-                            //    Console.WriteLine($"Column '{columnName}' is not empty or NULL.");
-                            //}
-
-                        //}
-                    }
-                }
-
-=======
                         foreach (DataRow schemaRow in schemaTable.Rows)
                         {
                             string columnName = schemaRow["ColumnName"].ToString();
@@ -178,7 +383,7 @@ namespace NullOrEmptyColumnRemoveLearn
 
                             bool isColumnEmptyOrNull = true;
 
-                            foreach(DataRow row in  dt.Rows)
+                            foreach (DataRow row in dt.Rows)
                             {
                                 object columnValue = row[columnName];
                                 if (!columnValue.ToString().Equals(DBNull.Value) &&
@@ -200,7 +405,6 @@ namespace NullOrEmptyColumnRemoveLearn
                         }
                     }
                 }
->>>>>>> 5feb85e3eca73f33a9bce49b343662d8f695dd3f
             }
             catch (Exception ex)
             {
@@ -208,9 +412,6 @@ namespace NullOrEmptyColumnRemoveLearn
             }
         }
 
-<<<<<<< HEAD
-        public void ThirdApproch()
-=======
         public void ThirdApproach()
         {
             string query = "SELECT * FROM student";
@@ -273,7 +474,7 @@ namespace NullOrEmptyColumnRemoveLearn
         [Benchmark]
         public void ThirdApproachMax()
         {
-            string query = "SELECT * FROM student";
+            string query = "SELECT * FROM student LIMIT 10000";
             try
             {
                 using (var connection = new MySqlConnection(_connectionString))
@@ -327,7 +528,6 @@ namespace NullOrEmptyColumnRemoveLearn
         }
 
         public void FourthApproach()
->>>>>>> 5feb85e3eca73f33a9bce49b343662d8f695dd3f
         {
             //string query = @"SELECT COLUMN_NAME
             //                    FROM INFORMATION_SCHEMA.COLUMNS
@@ -361,11 +561,6 @@ namespace NullOrEmptyColumnRemoveLearn
                     {
                         Console.WriteLine($"Column '{reader[0]}' is not empty or NULL.");
                     }
-<<<<<<< HEAD
-
-                }
-
-=======
                 }
             }
             catch (Exception ex)
@@ -377,7 +572,7 @@ namespace NullOrEmptyColumnRemoveLearn
         [Benchmark]
         public void FifthApproach()
         {
-            string query = "SELECT * FROM student";
+            string query = "SELECT * FROM student LIMIT 10000";
             try
             {
                 using (var connection = new MySqlConnection(_connectionString))
@@ -414,7 +609,7 @@ namespace NullOrEmptyColumnRemoveLearn
         [Benchmark]
         public void SixthApproach()
         {
-            string query = "SELECT * FROM student";
+            string query = "SELECT * FROM student LIMIT 10000";
             try
             {
                 using (var connection = new MySqlConnection(_connectionString))
@@ -451,7 +646,7 @@ namespace NullOrEmptyColumnRemoveLearn
         [Benchmark]
         public void SeventhApproach()
         {
-            string query = "SELECT * FROM student";
+            string query = "SELECT * FROM student LIMIT 10000";
             try
             {
                 using (var connection = new MySqlConnection(_connectionString))
@@ -478,16 +673,13 @@ namespace NullOrEmptyColumnRemoveLearn
                         }
                     });
                 }
->>>>>>> 5feb85e3eca73f33a9bce49b343662d8f695dd3f
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
+
+
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5feb85e3eca73f33a9bce49b343662d8f695dd3f
